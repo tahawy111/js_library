@@ -10,15 +10,15 @@ export function repeatStr(
 }
 
 // export function discount(regulerPrice, discount) {
-//   const discountP = 100 - discount;
+//   const discountP = ((100 - discount) / 100);
 
-//   const sale = +`0.${discountP}` * regulerPrice;
+//   const sale = discountP * regulerPrice;
 
 //   return sale;
 // }
 
 // Small function of discount function
 export function discount(regulerPrice, discount) {
-  return +`0.${100 - discount}` * regulerPrice;
+  return ((100 - discount) / 100) * regulerPrice;
 }
 

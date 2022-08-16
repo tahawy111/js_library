@@ -9,11 +9,16 @@ export function repeatStr(
   return final;
 }
 
+// export function discount(regulerPrice, discount) {
+//   const discountP = 100 - discount;
+
+//   const sale = +`0.${discountP}` * regulerPrice;
+
+//   return sale;
+// }
+
+// Small function of discount function
 export function discount(regulerPrice, discount) {
-  const discountP = 100 - discount;
-
-  const sale = +`0.${discountP}` * regulerPrice;
-
-  return sale;
+  return +`0.${100 - discount}` * regulerPrice;
 }
 

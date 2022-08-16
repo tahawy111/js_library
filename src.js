@@ -17,4 +17,3 @@ export function discount(regulerPrice, discount) {
   return sale;
 }
 
-console.log(discount(1500, 15));

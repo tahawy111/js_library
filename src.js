@@ -64,7 +64,7 @@ export function joinFromArr(arr, sep = "") {
   return result;
 }
 
-function convertToUpper(string) {
+export function convertToUpper(string) {
   let result = [];
   for (let i = 0; i < string.length; i++) {
     if (string[i] >= "a" && string[i] <= "z") {
@@ -75,7 +75,7 @@ function convertToUpper(string) {
   }
   return result.join("");
 }
-function convertToLower(string) {
+export function convertToLower(string) {
   let result = [];
   for (let i = 0; i < string.length; i++) {
     if (string[i] >= "A" && string[i] <= "Z") {

@@ -64,3 +64,27 @@ export function joinFromArr(arr, sep = "") {
   return result;
 }
 
+function convertToUpper(string) {
+  let result = [];
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] >= "a" && string[i] <= "z") {
+      result.push(String.fromCharCode(string.charCodeAt(i) - 32));
+    } else {
+      result.push(String.fromCharCode(string.charCodeAt(i)));
+    }
+  }
+  return result.join("");
+}
+function convertToLower(string) {
+  let result = [];
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] >= "A" && string[i] <= "Z") {
+      result.push(String.fromCharCode(string.charCodeAt(i) + 32));
+    } else {
+      result.push(String.fromCharCode(string.charCodeAt(i)));
+    }
+  }
+  return result.join("");
+}
+
+

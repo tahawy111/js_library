@@ -37,7 +37,6 @@ export function split(str, sep = "") {
   for (let i = 0; i < str.length; i++) {
     const el = str[i];
     if (el === sep || (sep === "" && temp)) {
-      console.log(temp);
       res.push(temp);
       temp = "";
     }

@@ -1,5 +1,5 @@
 export function repeatStr(
-  str /* hear add Sting */,
+  str /* hear add String */,
   num /* hear add the number that you want to repeat the string */
 ) {
   let final = "";

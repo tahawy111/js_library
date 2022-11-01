@@ -95,4 +95,12 @@ export function capitalize(string) {
     .join(" ");
 }
 
-
+// Get remainder of the division
+export function mod(dividend,divisor){
+ const divisionResult = dividend / divisor;
+ 
+ const correctNumber = Math.floor(divisionResult) * divisor
+ 
+ return dividend - correctNumber
+ 
+}

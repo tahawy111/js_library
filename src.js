@@ -117,3 +117,15 @@ export function filter_list(l,type) {
 
   return result;
 }
+
+// Remove vowels From String
+
+function rmV(str) {
+  let vou = ["a", "e", "i", "o", "u"];
+  return str
+    .split("")
+    .filter((e) => {
+      return vou.indexOf(e) === -1;
+    })
+    .join("");
+}

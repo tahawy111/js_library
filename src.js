@@ -104,3 +104,16 @@ export function mod(dividend,divisor){
  return dividend - correctNumber
  
 }
+
+// Remove Types From Array
+export function filter_list(l,type) {
+  // Return a new array with the strings filtered out
+  let typeCapitalize = type.split("");
+  typeCapitalize[0] = typeCapitalize[0].toUpperCase();
+  typeCapitalize = typeCapitalize.join("");
+  const result = l.filter((e) => {
+    return Object.prototype.toString.call(e) !== `[object ${typeCapitalize}]`;
+  });
+
+  return result;
+}

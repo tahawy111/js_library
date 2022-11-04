@@ -130,7 +130,7 @@ function rmV(str) {
     .join("");
 }
 
-// Get Smallest Value of an Array
+// Get Smallest Value or index of an Array
 function min(arr, toReturn){
   let min = Math.min(...arr);
   if (toReturn === "value") {

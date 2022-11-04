@@ -139,3 +139,18 @@ function min(arr, toReturn){
     return arr.indexOf(min);
   }
 }
+// OR
+function min(arr, toReturn) {
+  let result = Number.MAX_VALUE;
+  arr.forEach((item) => {
+    if (result > item) {
+      result = item;
+    }
+  });
+  if (toReturn === "value") {
+    return result;
+  } else {
+    return arr.indexOf(result);
+  }
+}
+

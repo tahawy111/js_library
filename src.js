@@ -1,3 +1,5 @@
+document.getElementById("date").innerHTML= new Date().getFullYear()
+
 export function repeatStr(
   str /* hear add String */,
   num /* hear add the number that you want to repeat the string */

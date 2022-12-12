@@ -156,17 +156,24 @@ function min(arr, toReturn) {
   }
 }
 
-// Get Days Between to days
+// Get Dates Between two Dates
 export function DaysDiff(date) {
   const dateByMill = Date.parse(date);
   const dateNow = Date.now();
   const nextOrPrev = dateNow > dateByMill ? 1 : -1;
   const days =
     parseInt((dateNow - dateByMill) / 1000 / 60 / 60 / 24) + nextOrPrev;
-  const f = new Intl.RelativeTimeFormat("en-us", {
+  const f = new Intl.RelativeTimeFormat("ar-eg", {
     style: "long",
-    numeric: "auto",
+    numeric: "always",
   });
 
-  return f.format(-days, "days");
+  return f.format(
+    -(days > 30 && days < 365
+      ? parseInt(days / 30)
+      : days > 365
+      ? parseInt(days / 365)
+      : days),
+    `${days > 30 && days < 365 ? "months" : days > 365 ? "years" : "days"}`
+  );
 }
